@@ -5,5 +5,6 @@ class PigLatinizer
     @string = string.downcase
   end
 
-
+  def piglatinize
+  end
 end
