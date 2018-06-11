@@ -1,5 +1,4 @@
 class PigLatinizer
-  attr_reader :user_phrase
 
   def piglatinize(input_str)
       x = (input_str.split(" ").length == 1) ? piglatinize_word(input_str) : piglatinize_sentence(input_str)
