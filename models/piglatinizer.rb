@@ -1,9 +1,11 @@
 class PigLatinizer
-  attr_reader :string
+  attr_reader :user_phrase
 
-  def initialize(string)
-    @string = string.downcase
+  def initialize(user_phrase)
+    @user_phrase = user_phrase.split(" ")
   end
+
+  def 
 
   def piglatinize
   end
