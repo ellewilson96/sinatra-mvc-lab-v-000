@@ -5,19 +5,11 @@ class PigLatinizer
     @user_phrase = user_phrase
   end
 
-  def piglatinize
-  alpha = ('a'..'z').to_a
-  vowels = %w[a e i o u]
-  consonants = alpha - vowels
-
-  if vowels.include?(str[0])
-    str + 'ay'
-  elsif consonants.include?(str[0]) && consonants.include?(str[1])
-    str[2..-1] + str[0..1] + 'ay'
-  elsif consonants.include?(str[0])
-    str[1..-1] + str[0] + 'ay'
-  else
-    str # return unchanged
+  def piglatinize(sentence)
+    sentence.split(" ").map do |word|
+      word = word.gsub("qu", " ")
+      word.gsub!(/^([^aeiou]*)(.*)/,'\2\1ay')
+      word = word.gsub(" ", "qu")
   end
 end
 end
