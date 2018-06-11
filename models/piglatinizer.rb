@@ -7,7 +7,7 @@ class PigLatinizer
 
   def
 
-  def piglatinize str
+  def piglatinize user_phrase
   alpha = ('a'..'z').to_a
   vowels = %w[a e i o u]
   consonants = alpha - vowels
